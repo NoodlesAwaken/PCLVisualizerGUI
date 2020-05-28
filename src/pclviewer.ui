@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PCLViewer</class>
+ <widget class="QMainWindow" name="PCLViewer">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1337</width>
+    <height>791</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>5000</width>
+    <height>5000</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>PCLViewer</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QVTKWidget" name="visualizer" native="true">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>10</y>
+      <width>1024</width>
+      <height>768</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>20</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Length ratio</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>100</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Max angle</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>190</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Max length</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>280</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Point size</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="start_button">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>620</y>
+      <width>201</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>21</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>START</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>390</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Point Cloud File</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>490</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Classification File</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pcd_button">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>390</y>
+      <width>89</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Open</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="class_button">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>490</y>
+      <width>89</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Open</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="path_to_pcd">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>440</y>
+      <width>231</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="path_to_class">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>540</y>
+      <width>231</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="ratioSpinBox">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>20</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="minimum">
+     <double>1.000000000000000</double>
+    </property>
+    <property name="singleStep">
+     <double>0.100000000000000</double>
+    </property>
+    <property name="value">
+     <double>2.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="lengthSpinBox">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>190</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="minimum">
+     <double>0.050000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>999.990000000000009</double>
+    </property>
+    <property name="singleStep">
+     <double>0.050000000000000</double>
+    </property>
+    <property name="value">
+     <double>0.200000000000000</double>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="angleSpinBox">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>100</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="minimum">
+     <double>100.000000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>180.000000000000000</double>
+    </property>
+    <property name="value">
+     <double>120.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="pointSpinBox">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>280</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>10</number>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QVTKWidget</class>
+   <extends>QWidget</extends>
+   <header>QVTKWidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>ratioSpinBox</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>PCLViewer</receiver>
+   <slot>ratioSpinBoxValueChanged(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>207</x>
+     <y>37</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>431</x>
+     <y>917</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>angleSpinBox</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>PCLViewer</receiver>
+   <slot>angleSpinBoxValueChanged(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>178</x>
+     <y>117</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>296</x>
+     <y>912</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lengthSpinBox</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>PCLViewer</receiver>
+   <slot>lengthSpinBoxValueChanged(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>231</x>
+     <y>201</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>962</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pointSpinBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>PCLViewer</receiver>
+   <slot>pointSpinBoxValueChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>196</x>
+     <y>293</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>274</x>
+     <y>939</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>class_button</sender>
+   <signal>clicked()</signal>
+   <receiver>PCLViewer</receiver>
+   <slot>classBrowseSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>237</x>
+     <y>495</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>33</x>
+     <y>346</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pcd_button</sender>
+   <signal>clicked()</signal>
+   <receiver>PCLViewer</receiver>
+   <slot>pcdBrowseSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>245</x>
+     <y>406</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>15</x>
+     <y>468</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>start_button</sender>
+   <signal>clicked()</signal>
+   <receiver>PCLViewer</receiver>
+   <slot>startSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>91</x>
+     <y>672</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>31</x>
+     <y>750</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>pcdBrowseSlot()</slot>
+  <slot>startSlot()</slot>
+  <slot>ratioSpinBoxValueChanged(double)</slot>
+  <slot>angleSpinBoxValueChanged(double)</slot>
+  <slot>lengthSpinBoxValueChanged(double)</slot>
+  <slot>pointSpinBoxValueChanged(int)</slot>
+  <slot>classBrowseSlot()</slot>
+ </slots>
+</ui>
